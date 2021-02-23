@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Product } from '../model/product';
+import { Bill } from '../model/bill';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
@@ -12,7 +12,9 @@ export class BillService {
 
   list: Bill[] = [];
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {
+    this.getAll();
+  }
 
   getAll(): Observable<Bill[]> {
     return this.http.get<Bill[]>(this.apiUrl);
