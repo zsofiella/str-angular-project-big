@@ -1,11 +1,11 @@
 import { Address } from "./address";
 
 export class Customer {
-    id: number = 0; 
-    firstName: string = ""; 
-    lastName: string = ""; 
-    email: string = ""; 
-    address: Address = undefined; 
+    id: number = 0;
+    firstName: string = "";
+    lastName: string = "";
+    email: string = "";
+    address: Address = undefined;
     active: boolean = true;
 
     constructor(properties?: Customer) {
